@@ -30,3 +30,8 @@ body {
 .blue {
   background-color: #8cbce3;
 }
+
+.flash {
+  opacity: 0.5;
+  background-color: white;
+}
