@@ -30,7 +30,13 @@ function userFlash(btn) {
 }
 
 function checkAns() {
-  // console.log(" curr level: ", level);
+  console.log(" curr level: ", level);
+  let idx = level - 1;
+  if (userSeq[idx] === gameSeq[idx]) {
+    console.log("same values");
+  } else {
+    h2.innerText = `Game Over Press Any Key to Restart`;
+  }
 }
 
 function levelUp() {
@@ -55,6 +61,7 @@ function btnPress() {
   userColor = btn.getAttribute("id");
   console.log(userColor);
   userSeq.push(userColor);
+  checkAns();
 }
 
 let allBtns = document.querySelectorAll(".btn");
