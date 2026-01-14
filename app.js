@@ -29,24 +29,32 @@ function userFlash(btn) {
   }, 150);
 }
 
+function checkAns() {
+  // console.log(" curr level: ", level);
+}
+
 function levelUp() {
   level++;
   h2.innerText = `Level ${level}`;
 
   let randIdx = Math.floor(Math.random() * 4);
-
   let randColor = btns[randIdx];
   let randBtn = document.querySelector(`.${randColor}`);
-  console.log(randIdx);
-  console.log(randColor);
-  console.log(randBtn);
+  // console.log(randIdx);
+  // console.log(randColor);
+  // console.log(randBtn);
   gameFlash(randBtn);
+  gameSeq.push(randColor);
+  console.log(gameSeq);
 }
 
 function btnPress() {
   console.log(this);
   let btn = this;
   userFlash(btn);
+  userColor = btn.getAttribute("id");
+  console.log(userColor);
+  userSeq.push(userColor);
 }
 
 let allBtns = document.querySelectorAll(".btn");
