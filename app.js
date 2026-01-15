@@ -34,7 +34,11 @@ function checkAns(idx) {
   console.log("userSeq: ", userSeq);
 
   if (userSeq[idx] !== gameSeq[idx]) {
-    h2.innerText = `Game Over Press Any Key to Restart`;
+    h2.innerHTML = `Game Over your final score is  <b>${level}</b> <br> Press Any Key to Restart`;
+    document.querySelector("body").style.backgroundColor = "red";
+    setTimeout(function () {
+      document.querySelector("body").style.backgroundColor = "white";
+    }, 150);
     reset();
   } else if (userSeq.length === gameSeq.length) {
     setTimeout(levelUp, 1000);
@@ -54,7 +58,7 @@ function levelUp(idx) {
   // console.log(randBtn);
 
   gameSeq.push(randColor);
-  console.log(gameSeq);
+  // console.log(gameSeq);
   gameFlash(randBtn);
 }
 
