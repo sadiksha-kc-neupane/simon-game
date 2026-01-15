@@ -17,18 +17,18 @@ body {
 }
 
 .green {
-  background-color: #a9e0ab;
+  background-color: #0ce213;
 }
 
 .red {
-  background-color: #da8983;
+  background-color: #df2214;
 }
 
 .yellow {
-  background-color: #e5dfa7;
+  background-color: #fae62f;
 }
 .blue {
-  background-color: #8cbce3;
+  background-color: #0d71c3;
 }
 
 .flash {
@@ -37,5 +37,5 @@ body {
 }
 
 .userFlash {
-  background-color: hotpink;
+  background-color: rgb(233, 101, 238);
 }
